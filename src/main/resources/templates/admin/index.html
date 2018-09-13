@@ -4,112 +4,1108 @@
       layout:decorate="~{admin/common/common}">
 <head>
     <title>微策智能 v3.0</title>
-    <script th:inline="javascript">
-        /*修改密码*/
-        function edit_password(title,url,w,h){
-            layer_show(title,url,w,h);
-        }
-    </script>
+
 </head>
 
-<body layout:fragment="content" class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default" >
-<!-- begin:: Page -->
-<div class="m-grid m-grid--hor m-grid--root m-page">
+<body layout:fragment="content">
+<div th:class="m-content">
+    Inner page content goes here
+</div>
 
+<div class="m-widget24__item">
+    <h4 class="m-widget24__title">
+        Total Frofit
+    </h4><br>
+    <span class="m-widget24__desc">
+				            All Customs Value
+				        </span>
+    <span class="m-widget24__stats m--font-brand">
+				            $18M
+				        </span>
+    <div class="m--space-10"></div>
+    <div class="progress m-progress--sm">
+        <div class="progress-bar m--bg-brand" role="progressbar" style="width: 78%;" aria-valuenow="50"
+             aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <span class="m-widget24__change">
+							Change
+						</span>
+    <span class="m-widget24__number">
+							78%
+					    </span>
+</div>
 
-    <!-- BEGIN: Header -->
-    <div th:replace="~{admin/common/header :: header}"></div>
-    <!-- END: Header -->
-    <!-- begin::Body -->
-    <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
-
-        <!-- BEGIN: Left Aside -->
-        <div th:replace="~{admin/common/left :: left}"></div>
-        <!-- END: Left Aside -->
-        <div class="m-grid__item m-grid__item--fluid m-wrapper">
-
-            <!-- BEGIN: Subheader -->
-            <div class="m-subheader ">
-                <div class="d-flex align-items-center">
-                    <div class="mr-auto">
-                        <h3 class="m-subheader__title m-subheader__title--separator">Inner Page</h3>
-                        <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
-                            <li class="m-nav__item m-nav__item--home">
-                                <a href="#" class="m-nav__link m-nav__link--icon">
-                                    <i class="m-nav__link-icon la la-home"></i>
-                                </a>
-                            </li>
-                            <li class="m-nav__separator">-</li>
-                            <li class="m-nav__item">
-                                <a href="" class="m-nav__link">
-                                    <span class="m-nav__link-text">Resources</span>
-                                </a>
-                            </li>
-                            <li class="m-nav__separator">-</li>
-                            <li class="m-nav__item">
-                                <a href="" class="m-nav__link">
-                                    <span class="m-nav__link-text">Timesheet</span>
-                                </a>
-                            </li>
-                        </ul>
+<div class="row">
+    <div class="col-xl-6 col-lg-12">
+        <!--Begin::Portlet-->
+        <div class="m-portlet  m-portlet--full-height  m-portlet--unair">
+            <div class="m-portlet__head">
+                <div class="m-portlet__head-caption">
+                    <div class="m-portlet__head-title">
+                        <h3 class="m-portlet__head-text">
+                            Recent Activities
+                        </h3>
                     </div>
-                    <div>
-                        <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" m-dropdown-toggle="hover" aria-expanded="true">
-
+                </div>
+                <div class="m-portlet__head-tools">
+                    <ul class="m-portlet__nav">
+                        <li class="m-portlet__nav-item m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push"
+                            m-dropdown-toggle="hover" aria-expanded="true">
+                            <a href="#"
+                               class="m-portlet__nav-link m-portlet__nav-link--icon m-portlet__nav-link--icon-xl m-dropdown__toggle">
+                                <i class="la la-ellipsis-h m--font-brand"></i>
+                            </a>
+                            <div class="m-dropdown__wrapper" style="z-index: 101;">
+                                <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"
+                                      style="left: auto;"></span>
+                                <div class="m-dropdown__inner">
+                                    <div class="m-dropdown__body">
+                                        <div class="m-dropdown__content">
+                                            <ul class="m-nav">
+                                                <li class="m-nav__section m-nav__section--first">
+                                                    <span class="m-nav__section-text">Quick Actions</span>
+                                                </li>
+                                                <li class="m-nav__item">
+                                                    <a href="" class="m-nav__link">
+                                                        <i class="m-nav__link-icon flaticon-share"></i>
+                                                        <span class="m-nav__link-text">Activity</span>
+                                                    </a>
+                                                </li>
+                                                <li class="m-nav__item">
+                                                    <a href="" class="m-nav__link">
+                                                        <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                        <span class="m-nav__link-text">Messages</span>
+                                                    </a>
+                                                </li>
+                                                <li class="m-nav__item">
+                                                    <a href="" class="m-nav__link">
+                                                        <i class="m-nav__link-icon flaticon-info"></i>
+                                                        <span class="m-nav__link-text">FAQ</span>
+                                                    </a>
+                                                </li>
+                                                <li class="m-nav__item">
+                                                    <a href="" class="m-nav__link">
+                                                        <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                        <span class="m-nav__link-text">Support</span>
+                                                    </a>
+                                                </li>
+                                                <li class="m-nav__separator m-nav__separator--fit">
+                                                </li>
+                                                <li class="m-nav__item">
+                                                    <a href="#"
+                                                       class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">Cancel</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="m-portlet__body">
+                <div class="m-scrollable m-scroller ps ps--active-y" data-scrollable="true" data-height="380"
+                     data-mobile-height="300" style="height: 380px; overflow: hidden;">
+                    <!--Begin::Timeline 2 -->
+                    <div class="m-timeline-2">
+                        <div class="m-timeline-2__items  m--padding-top-25 m--padding-bottom-30">
+                            <div class="m-timeline-2__item">
+                                <span class="m-timeline-2__item-time">10:00</span>
+                                <div class="m-timeline-2__item-cricle">
+                                    <i class="fa fa-genderless m--font-danger"></i>
+                                </div>
+                                <div class="m-timeline-2__item-text  m--padding-top-5">
+                                    Lorem ipsum dolor sit amit,consectetur eiusmdd tempor<br>
+                                    incididunt ut labore et dolore magna
+                                </div>
+                            </div>
+                            <div class="m-timeline-2__item m--margin-top-30">
+                                <span class="m-timeline-2__item-time">12:45</span>
+                                <div class="m-timeline-2__item-cricle">
+                                    <i class="fa fa-genderless m--font-success"></i>
+                                </div>
+                                <div class="m-timeline-2__item-text m-timeline-2__item-text--bold">
+                                    AEOL Meeting With
+                                </div>
+                                <div class="m-list-pics m-list-pics--sm m--padding-left-20">
+                                    <a href="#"><img src="assets/app/media/img/users/100_4.jpg" title=""></a>
+                                    <a href="#"><img src="assets/app/media/img/users/100_13.jpg" title=""></a>
+                                    <a href="#"><img src="assets/app/media/img/users/100_11.jpg" title=""></a>
+                                    <a href="#"><img src="assets/app/media/img/users/100_14.jpg" title=""></a>
+                                </div>
+                            </div>
+                            <div class="m-timeline-2__item m--margin-top-30">
+                                <span class="m-timeline-2__item-time">14:00</span>
+                                <div class="m-timeline-2__item-cricle">
+                                    <i class="fa fa-genderless m--font-brand"></i>
+                                </div>
+                                <div class="m-timeline-2__item-text m--padding-top-5">
+                                    Make Deposit <a href="#" class="m-link m-link--brand m--font-bolder">USD 700</a> To
+                                    ESL.
+                                </div>
+                            </div>
+                            <div class="m-timeline-2__item m--margin-top-30">
+                                <span class="m-timeline-2__item-time">16:00</span>
+                                <div class="m-timeline-2__item-cricle">
+                                    <i class="fa fa-genderless m--font-warning"></i>
+                                </div>
+                                <div class="m-timeline-2__item-text m--padding-top-5">
+                                    Lorem ipsum dolor sit amit,consectetur eiusmdd tempor<br>
+                                    incididunt ut labore et dolore magna elit enim at minim<br>
+                                    veniam quis nostrud
+                                </div>
+                            </div>
+                            <div class="m-timeline-2__item m--margin-top-30">
+                                <span class="m-timeline-2__item-time">17:00</span>
+                                <div class="m-timeline-2__item-cricle">
+                                    <i class="fa fa-genderless m--font-info"></i>
+                                </div>
+                                <div class="m-timeline-2__item-text m--padding-top-5">
+                                    Placed a new order in <a href="#" class="m-link m-link--brand m--font-bolder">SIGNATURE
+                                    MOBILE</a> marketplace.
+                                </div>
+                            </div>
+                            <div class="m-timeline-2__item m--margin-top-30">
+                                <span class="m-timeline-2__item-time">16:00</span>
+                                <div class="m-timeline-2__item-cricle">
+                                    <i class="fa fa-genderless m--font-brand"></i>
+                                </div>
+                                <div class="m-timeline-2__item-text m--padding-top-5">
+                                    Lorem ipsum dolor sit amit,consectetur eiusmdd tempor<br>
+                                    incididunt ut labore et dolore magna elit enim at minim<br>
+                                    veniam quis nostrud
+                                </div>
+                            </div>
+                            <div class="m-timeline-2__item m--margin-top-30">
+                                <span class="m-timeline-2__item-time">17:00</span>
+                                <div class="m-timeline-2__item-cricle">
+                                    <i class="fa fa-genderless m--font-danger"></i>
+                                </div>
+                                <div class="m-timeline-2__item-text m--padding-top-5">
+                                    Received a new feedback on <a href="#" class="m-link m-link--brand m--font-bolder">FinancePro
+                                    App</a> product.
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <!--End::Timeline 2 -->
+                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                        <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                    </div>
+                    <div class="ps__rail-y" style="top: 0px; height: 380px; right: 4px;">
+                        <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 275px;"></div>
                     </div>
                 </div>
             </div>
-            <!-- END: Subheader -->		        <div class="m-content">
-            Inner page content goes here		        </div>
         </div>
+        <!--End::Portlet-->  </div>
+    <div class="col-xl-6 col-lg-12">
+        <!--Begin::Portlet-->
+        <div class="m-portlet m-portlet--full-height  m-portlet--unair">
+            <div class="m-portlet__head">
+                <div class="m-portlet__head-caption">
+                    <div class="m-portlet__head-title">
+                        <h3 class="m-portlet__head-text">
+                            Recent Notifications
+                        </h3>
+                    </div>
+                </div>
+                <div class="m-portlet__head-tools">
+                    <ul class="nav nav-pills nav-pills--brand m-nav-pills--align-right m-nav-pills--btn-pill m-nav-pills--btn-sm"
+                        role="tablist">
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_widget2_tab1_content"
+                               role="tab">
+                                Today
+                            </a>
+                        </li>
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget2_tab2_content"
+                               role="tab">
+                                Month
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="m-portlet__body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="m_widget2_tab1_content">
+                        <!--Begin::Timeline 3 -->
+                        <div class="m-timeline-3">
+                            <div class="m-timeline-3__items">
+                                <div class="m-timeline-3__item m-timeline-3__item--info">
+                                    <span class="m-timeline-3__item-time">09:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								Lorem ipsum dolor sit amit,consectetur eiusmdd tempor
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By Bob
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                                <div class="m-timeline-3__item m-timeline-3__item--warning">
+                                    <span class="m-timeline-3__item-time">10:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								Lorem ipsum dolor sit amit
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By Sean
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                                <div class="m-timeline-3__item m-timeline-3__item--brand">
+                                    <span class="m-timeline-3__item-time">11:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								Lorem ipsum dolor sit amit eiusmdd tempor
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By James
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                                <div class="m-timeline-3__item m-timeline-3__item--success">
+                                    <span class="m-timeline-3__item-time">12:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								Lorem ipsum dolor
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By James
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                                <div class="m-timeline-3__item m-timeline-3__item--danger">
+                                    <span class="m-timeline-3__item-time">14:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								Lorem ipsum dolor sit amit,consectetur eiusmdd
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By Derrick
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                                <div class="m-timeline-3__item m-timeline-3__item--info">
+                                    <span class="m-timeline-3__item-time">15:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								Lorem ipsum dolor sit amit,consectetur
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By Iman
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                                <div class="m-timeline-3__item m-timeline-3__item--brand">
+                                    <span class="m-timeline-3__item-time">17:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								Lorem ipsum dolor sit consectetur eiusmdd tempor
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By Aziko
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End::Timeline 3 -->
+                    </div>
+                    <div class="tab-pane" id="m_widget2_tab2_content">
+                        <!--Begin::Timeline 3 -->
+                        <div class="m-timeline-3">
+                            <div class="m-timeline-3__items">
+                                <div class="m-timeline-3__item m-timeline-3__item--info">
+                                    <span class="m-timeline-3__item-time m--font-focus">09:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								Contrary to popular belief, Lorem Ipsum is not simply random text.
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By Bob
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                                <div class="m-timeline-3__item m-timeline-3__item--warning">
+                                    <span class="m-timeline-3__item-time m--font-warning">10:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								There are many variations of passages of Lorem Ipsum available.
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By Sean
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                                <div class="m-timeline-3__item m-timeline-3__item--brand">
+                                    <span class="m-timeline-3__item-time m--font-primary">11:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								Contrary to popular belief, Lorem Ipsum is not simply random text.
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By James
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                                <div class="m-timeline-3__item m-timeline-3__item--success">
+                                    <span class="m-timeline-3__item-time m--font-success">12:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								The standard chunk of Lorem Ipsum used since the 1500s is reproduced.
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By James
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                                <div class="m-timeline-3__item m-timeline-3__item--danger">
+                                    <span class="m-timeline-3__item-time m--font-warning">14:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								Latin words, combined with a handful of model sentence structures.
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By Derrick
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                                <div class="m-timeline-3__item m-timeline-3__item--info">
+                                    <span class="m-timeline-3__item-time m--font-info">15:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								Contrary to popular belief, Lorem Ipsum is not simply random text.
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By Iman
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                                <div class="m-timeline-3__item m-timeline-3__item--brand">
+                                    <span class="m-timeline-3__item-time m--font-danger">17:00</span>
+                                    <div class="m-timeline-3__item-desc">
+								<span class="m-timeline-3__item-text">
+								Lorem Ipsum is therefore always free from repetition, injected humour.
+								</span><br>
+                                        <span class="m-timeline-3__item-user-name">
+								<a href="#" class="m-link m-link--metal m-timeline-3__item-link">
+								By Aziko
+								</a>
+								</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End::Timeline 3 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End::Portlet-->    </div>
+</div>
 
-
+<div class="row">
+    <div class="col-xl-8">
+        <div class="m-portlet m-portlet--mobile  m-portlet--unair">
+            <div class="m-portlet__head">
+                <div class="m-portlet__head-caption">
+                    <div class="m-portlet__head-title">
+                        <h3 class="m-portlet__head-text">
+                            Exclusive Datatable Plugin
+                        </h3>
+                    </div>
+                </div>
+                <div class="m-portlet__head-tools">
+                    <ul class="m-portlet__nav">
+                        <li class="m-portlet__nav-item">
+                            <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push"
+                                 m-dropdown-toggle="hover" aria-expanded="true">
+                                <a href="#"
+                                   class="m-portlet__nav-link btn btn-lg btn-secondary  m-btn m-btn--icon m-btn--icon-only m-btn--pill  m-dropdown__toggle">
+                                    <i class="la la-ellipsis-h m--font-brand"></i>
+                                </a>
+                                <div class="m-dropdown__wrapper" style="z-index: 101;">
+                                    <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"
+                                          style="left: auto;"></span>
+                                    <div class="m-dropdown__inner">
+                                        <div class="m-dropdown__body">
+                                            <div class="m-dropdown__content">
+                                                <ul class="m-nav">
+                                                    <li class="m-nav__section m-nav__section--first">
+                                                        <span class="m-nav__section-text">Quick Actions</span>
+                                                    </li>
+                                                    <li class="m-nav__item">
+                                                        <a href="" class="m-nav__link">
+                                                            <i class="m-nav__link-icon flaticon-share"></i>
+                                                            <span class="m-nav__link-text">Create Post</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="m-nav__item">
+                                                        <a href="" class="m-nav__link">
+                                                            <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                            <span class="m-nav__link-text">Send Messages</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="m-nav__item">
+                                                        <a href="" class="m-nav__link">
+                                                            <i class="m-nav__link-icon flaticon-multimedia-2"></i>
+                                                            <span class="m-nav__link-text">Upload File</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="m-nav__section">
+                                                        <span class="m-nav__section-text">Useful Links</span>
+                                                    </li>
+                                                    <li class="m-nav__item">
+                                                        <a href="" class="m-nav__link">
+                                                            <i class="m-nav__link-icon flaticon-info"></i>
+                                                            <span class="m-nav__link-text">FAQ</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="m-nav__item">
+                                                        <a href="" class="m-nav__link">
+                                                            <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                            <span class="m-nav__link-text">Support</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="m-nav__separator m-nav__separator--fit m--hide">
+                                                    </li>
+                                                    <li class="m-nav__item m--hide">
+                                                        <a href="#"
+                                                           class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">Submit</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="m-portlet__body">
+                <!--begin: Datatable -->
+                <div class="m_datatable m-datatable m-datatable--default m-datatable--loaded m-datatable--scroll"
+                     id="m_datatable_latest_orders" style="">
+                    <table class="m-datatable__table" style="display: block; min-height: 300px; max-height: 380px;">
+                        <thead class="m-datatable__head">
+                        <tr class="m-datatable__row" style="left: 0px;">
+                            <th data-field="RecordID"
+                                class="m-datatable__cell--center m-datatable__cell m-datatable__cell--check"><span
+                                    style="width: 40px;"><label
+                                    class="m-checkbox m-checkbox--single m-checkbox--all m-checkbox--solid m-checkbox--brand"><input
+                                    type="checkbox">&nbsp;<span></span></label></span></th>
+                            <th data-field="OrderID" class="m-datatable__cell m-datatable__cell--sort" data-sort="asc">
+                                <span style="width: 150px;">Order ID<i class="la la-arrow-up"></i></span></th>
+                            <th data-field="ShipName" class="m-datatable__cell m-datatable__cell--sort"><span
+                                    style="width: 150px;">Ship Name</span></th>
+                            <th data-field="ShipDate" class="m-datatable__cell m-datatable__cell--sort"><span
+                                    style="width: 110px;">Ship Date</span></th>
+                            <th data-field="Status" class="m-datatable__cell m-datatable__cell--sort"><span
+                                    style="width: 100px;">Status</span></th>
+                            <th data-field="Type" class="m-datatable__cell m-datatable__cell--sort"><span
+                                    style="width: 100px;">Type</span></th>
+                            <th data-field="Actions" class="m-datatable__cell m-datatable__cell--sort"><span
+                                    style="width: 110px;">Actions</span></th>
+                        </tr>
+                        </thead>
+                        <tbody style="max-height: 330.476px;" class="m-datatable__body ps ps--active-x ps--active-y">
+                        <tr data-row="20" class="m-datatable__row" style="left: 0px;">
+                            <td class="m-datatable__cell--center m-datatable__cell m-datatable__cell--check"
+                                data-field="RecordID"><span style="width: 40px;"><label
+                                    class="m-checkbox m-checkbox--single m-checkbox--solid m-checkbox--brand"><input
+                                    type="checkbox" value="12">&nbsp;<span></span></label></span></td>
+                            <td class="m-datatable__cell--sorted m-datatable__cell" data-field="OrderID"><span
+                                    style="width: 150px;">0185-0130 - CN</span></td>
+                            <td data-field="ShipName" class="m-datatable__cell"><span
+                                    style="width: 150px;">Langosh Inc</span></td>
+                            <td data-field="ShipDate" class="m-datatable__cell"><span
+                                    style="width: 110px;">4/2/2017</span></td>
+                            <td data-field="Status" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge  m-badge--primary m-badge--wide">Canceled</span></span></td>
+                            <td data-field="Type" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge m-badge--danger m-badge--dot"></span>&nbsp;<span
+                                    class="m--font-bold m--font-danger">Online</span></span></td>
+                            <td data-field="Actions" class="m-datatable__cell"><span
+                                    style="overflow: visible; position: relative; width: 110px;">                        <div
+                                    class="dropdown ">                            <a href="#"
+                                                                                     class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                                                                     data-toggle="dropdown">                                <i
+                                    class="la la-ellipsis-h"></i>                            </a>                            <div
+                                    class="dropdown-menu dropdown-menu-right">                                <a
+                                    class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>                            </div>                        </div>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Edit details">                            <i class="la la-edit"></i>                        </a>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Delete">                            <i class="la la-trash"></i>                        </a>                    </span>
+                            </td>
+                        </tr>
+                        <tr data-row="21" class="m-datatable__row m-datatable__row--even" style="left: 0px;">
+                            <td class="m-datatable__cell--center m-datatable__cell m-datatable__cell--check"
+                                data-field="RecordID"><span style="width: 40px;"><label
+                                    class="m-checkbox m-checkbox--single m-checkbox--solid m-checkbox--brand"><input
+                                    type="checkbox" value="106">&nbsp;<span></span></label></span></td>
+                            <td class="m-datatable__cell--sorted m-datatable__cell" data-field="OrderID"><span
+                                    style="width: 150px;">0185-0139 - PH</span></td>
+                            <td data-field="ShipName" class="m-datatable__cell"><span style="width: 150px;">Pouros, McGlynn and Rempel</span>
+                            </td>
+                            <td data-field="ShipDate" class="m-datatable__cell"><span
+                                    style="width: 110px;">6/12/2016</span></td>
+                            <td data-field="Status" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge  m-badge--info m-badge--wide">Info</span></span></td>
+                            <td data-field="Type" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge m-badge--primary m-badge--dot"></span>&nbsp;<span
+                                    class="m--font-bold m--font-primary">Retail</span></span></td>
+                            <td data-field="Actions" class="m-datatable__cell"><span
+                                    style="overflow: visible; position: relative; width: 110px;">                        <div
+                                    class="dropdown ">                            <a href="#"
+                                                                                     class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                                                                     data-toggle="dropdown">                                <i
+                                    class="la la-ellipsis-h"></i>                            </a>                            <div
+                                    class="dropdown-menu dropdown-menu-right">                                <a
+                                    class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>                            </div>                        </div>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Edit details">                            <i class="la la-edit"></i>                        </a>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Delete">                            <i class="la la-trash"></i>                        </a>                    </span>
+                            </td>
+                        </tr>
+                        <tr data-row="22" class="m-datatable__row" style="left: 0px;">
+                            <td class="m-datatable__cell--center m-datatable__cell m-datatable__cell--check"
+                                data-field="RecordID"><span style="width: 40px;"><label
+                                    class="m-checkbox m-checkbox--single m-checkbox--solid m-checkbox--brand"><input
+                                    type="checkbox" value="41">&nbsp;<span></span></label></span></td>
+                            <td class="m-datatable__cell--sorted m-datatable__cell" data-field="OrderID"><span
+                                    style="width: 150px;">0187-2201 - BR</span></td>
+                            <td data-field="ShipName" class="m-datatable__cell"><span
+                                    style="width: 150px;">Leffler LLC</span></td>
+                            <td data-field="ShipDate" class="m-datatable__cell"><span
+                                    style="width: 110px;">6/10/2017</span></td>
+                            <td data-field="Status" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge  m-badge--primary m-badge--wide">Canceled</span></span></td>
+                            <td data-field="Type" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge m-badge--primary m-badge--dot"></span>&nbsp;<span
+                                    class="m--font-bold m--font-primary">Retail</span></span></td>
+                            <td data-field="Actions" class="m-datatable__cell"><span
+                                    style="overflow: visible; position: relative; width: 110px;">                        <div
+                                    class="dropdown ">                            <a href="#"
+                                                                                     class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                                                                     data-toggle="dropdown">                                <i
+                                    class="la la-ellipsis-h"></i>                            </a>                            <div
+                                    class="dropdown-menu dropdown-menu-right">                                <a
+                                    class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>                            </div>                        </div>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Edit details">                            <i class="la la-edit"></i>                        </a>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Delete">                            <i class="la la-trash"></i>                        </a>                    </span>
+                            </td>
+                        </tr>
+                        <tr data-row="23" class="m-datatable__row m-datatable__row--even" style="left: 0px;">
+                            <td class="m-datatable__cell--center m-datatable__cell m-datatable__cell--check"
+                                data-field="RecordID"><span style="width: 40px;"><label
+                                    class="m-checkbox m-checkbox--single m-checkbox--solid m-checkbox--brand"><input
+                                    type="checkbox" value="171">&nbsp;<span></span></label></span></td>
+                            <td class="m-datatable__cell--sorted m-datatable__cell" data-field="OrderID"><span
+                                    style="width: 150px;">0220-9343 - ID</span></td>
+                            <td data-field="ShipName" class="m-datatable__cell"><span style="width: 150px;">Hagenes, Murphy and Kunde</span>
+                            </td>
+                            <td data-field="ShipDate" class="m-datatable__cell"><span
+                                    style="width: 110px;">4/6/2017</span></td>
+                            <td data-field="Status" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge m-badge--brand m-badge--wide">Pending</span></span></td>
+                            <td data-field="Type" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge m-badge--primary m-badge--dot"></span>&nbsp;<span
+                                    class="m--font-bold m--font-primary">Retail</span></span></td>
+                            <td data-field="Actions" class="m-datatable__cell"><span
+                                    style="overflow: visible; position: relative; width: 110px;">                        <div
+                                    class="dropdown ">                            <a href="#"
+                                                                                     class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                                                                     data-toggle="dropdown">                                <i
+                                    class="la la-ellipsis-h"></i>                            </a>                            <div
+                                    class="dropdown-menu dropdown-menu-right">                                <a
+                                    class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>                            </div>                        </div>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Edit details">                            <i class="la la-edit"></i>                        </a>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Delete">                            <i class="la la-trash"></i>                        </a>                    </span>
+                            </td>
+                        </tr>
+                        <tr data-row="24" class="m-datatable__row" style="left: 0px;">
+                            <td class="m-datatable__cell--center m-datatable__cell m-datatable__cell--check"
+                                data-field="RecordID"><span style="width: 40px;"><label
+                                    class="m-checkbox m-checkbox--single m-checkbox--solid m-checkbox--brand"><input
+                                    type="checkbox" value="350">&nbsp;<span></span></label></span></td>
+                            <td class="m-datatable__cell--sorted m-datatable__cell" data-field="OrderID"><span
+                                    style="width: 150px;">0268-0814 - UA</span></td>
+                            <td data-field="ShipName" class="m-datatable__cell"><span style="width: 150px;">Altenwerth, Reilly and Conn</span>
+                            </td>
+                            <td data-field="ShipDate" class="m-datatable__cell"><span
+                                    style="width: 110px;">11/20/2016</span></td>
+                            <td data-field="Status" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge m-badge--brand m-badge--wide">Pending</span></span></td>
+                            <td data-field="Type" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge m-badge--primary m-badge--dot"></span>&nbsp;<span
+                                    class="m--font-bold m--font-primary">Retail</span></span></td>
+                            <td data-field="Actions" class="m-datatable__cell"><span
+                                    style="overflow: visible; position: relative; width: 110px;">                        <div
+                                    class="dropdown ">                            <a href="#"
+                                                                                     class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                                                                     data-toggle="dropdown">                                <i
+                                    class="la la-ellipsis-h"></i>                            </a>                            <div
+                                    class="dropdown-menu dropdown-menu-right">                                <a
+                                    class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>                            </div>                        </div>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Edit details">                            <i class="la la-edit"></i>                        </a>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Delete">                            <i class="la la-trash"></i>                        </a>                    </span>
+                            </td>
+                        </tr>
+                        <tr data-row="25" class="m-datatable__row m-datatable__row--even" style="left: 0px;">
+                            <td class="m-datatable__cell--center m-datatable__cell m-datatable__cell--check"
+                                data-field="RecordID"><span style="width: 40px;"><label
+                                    class="m-checkbox m-checkbox--single m-checkbox--solid m-checkbox--brand"><input
+                                    type="checkbox" value="140">&nbsp;<span></span></label></span></td>
+                            <td class="m-datatable__cell--sorted m-datatable__cell" data-field="OrderID"><span
+                                    style="width: 150px;">0268-0925 - PH</span></td>
+                            <td data-field="ShipName" class="m-datatable__cell"><span
+                                    style="width: 150px;">Heaney Inc</span></td>
+                            <td data-field="ShipDate" class="m-datatable__cell"><span
+                                    style="width: 110px;">12/9/2016</span></td>
+                            <td data-field="Status" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge  m-badge--metal m-badge--wide">Delivered</span></span></td>
+                            <td data-field="Type" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge m-badge--primary m-badge--dot"></span>&nbsp;<span
+                                    class="m--font-bold m--font-primary">Retail</span></span></td>
+                            <td data-field="Actions" class="m-datatable__cell"><span
+                                    style="overflow: visible; position: relative; width: 110px;">                        <div
+                                    class="dropdown ">                            <a href="#"
+                                                                                     class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                                                                     data-toggle="dropdown">                                <i
+                                    class="la la-ellipsis-h"></i>                            </a>                            <div
+                                    class="dropdown-menu dropdown-menu-right">                                <a
+                                    class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>                            </div>                        </div>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Edit details">                            <i class="la la-edit"></i>                        </a>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Delete">                            <i class="la la-trash"></i>                        </a>                    </span>
+                            </td>
+                        </tr>
+                        <tr data-row="26" class="m-datatable__row" style="left: 0px;">
+                            <td class="m-datatable__cell--center m-datatable__cell m-datatable__cell--check"
+                                data-field="RecordID"><span style="width: 40px;"><label
+                                    class="m-checkbox m-checkbox--single m-checkbox--solid m-checkbox--brand"><input
+                                    type="checkbox" value="194">&nbsp;<span></span></label></span></td>
+                            <td class="m-datatable__cell--sorted m-datatable__cell" data-field="OrderID"><span
+                                    style="width: 150px;">0268-1333 - MN</span></td>
+                            <td data-field="ShipName" class="m-datatable__cell"><span style="width: 150px;">Schowalter Inc</span>
+                            </td>
+                            <td data-field="ShipDate" class="m-datatable__cell"><span
+                                    style="width: 110px;">8/5/2016</span></td>
+                            <td data-field="Status" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge  m-badge--info m-badge--wide">Info</span></span></td>
+                            <td data-field="Type" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge m-badge--primary m-badge--dot"></span>&nbsp;<span
+                                    class="m--font-bold m--font-primary">Retail</span></span></td>
+                            <td data-field="Actions" class="m-datatable__cell"><span
+                                    style="overflow: visible; position: relative; width: 110px;">                        <div
+                                    class="dropdown dropup">                            <a href="#"
+                                                                                           class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                                                                           data-toggle="dropdown">                                <i
+                                    class="la la-ellipsis-h"></i>                            </a>                            <div
+                                    class="dropdown-menu dropdown-menu-right">                                <a
+                                    class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>                            </div>                        </div>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Edit details">                            <i class="la la-edit"></i>                        </a>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Delete">                            <i class="la la-trash"></i>                        </a>                    </span>
+                            </td>
+                        </tr>
+                        <tr data-row="27" class="m-datatable__row m-datatable__row--even" style="left: 0px;">
+                            <td class="m-datatable__cell--center m-datatable__cell m-datatable__cell--check"
+                                data-field="RecordID"><span style="width: 40px;"><label
+                                    class="m-checkbox m-checkbox--single m-checkbox--solid m-checkbox--brand"><input
+                                    type="checkbox" value="151">&nbsp;<span></span></label></span></td>
+                            <td class="m-datatable__cell--sorted m-datatable__cell" data-field="OrderID"><span
+                                    style="width: 150px;">0268-1504 - PH</span></td>
+                            <td data-field="ShipName" class="m-datatable__cell"><span style="width: 150px;">Schaden, Bode and Miller</span>
+                            </td>
+                            <td data-field="ShipDate" class="m-datatable__cell"><span
+                                    style="width: 110px;">9/13/2016</span></td>
+                            <td data-field="Status" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge  m-badge--success m-badge--wide">Success</span></span></td>
+                            <td data-field="Type" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge m-badge--danger m-badge--dot"></span>&nbsp;<span
+                                    class="m--font-bold m--font-danger">Online</span></span></td>
+                            <td data-field="Actions" class="m-datatable__cell"><span
+                                    style="overflow: visible; position: relative; width: 110px;">                        <div
+                                    class="dropdown dropup">                            <a href="#"
+                                                                                           class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                                                                           data-toggle="dropdown">                                <i
+                                    class="la la-ellipsis-h"></i>                            </a>                            <div
+                                    class="dropdown-menu dropdown-menu-right">                                <a
+                                    class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>                            </div>                        </div>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Edit details">                            <i class="la la-edit"></i>                        </a>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Delete">                            <i class="la la-trash"></i>                        </a>                    </span>
+                            </td>
+                        </tr>
+                        <tr data-row="28" class="m-datatable__row" style="left: 0px;">
+                            <td class="m-datatable__cell--center m-datatable__cell m-datatable__cell--check"
+                                data-field="RecordID"><span style="width: 40px;"><label
+                                    class="m-checkbox m-checkbox--single m-checkbox--solid m-checkbox--brand"><input
+                                    type="checkbox" value="292">&nbsp;<span></span></label></span></td>
+                            <td class="m-datatable__cell--sorted m-datatable__cell" data-field="OrderID"><span
+                                    style="width: 150px;">0299-3848 - CN</span></td>
+                            <td data-field="ShipName" class="m-datatable__cell"><span style="width: 150px;">Rutherford and Sons</span>
+                            </td>
+                            <td data-field="ShipDate" class="m-datatable__cell"><span
+                                    style="width: 110px;">8/22/2017</span></td>
+                            <td data-field="Status" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge  m-badge--primary m-badge--wide">Canceled</span></span></td>
+                            <td data-field="Type" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge m-badge--primary m-badge--dot"></span>&nbsp;<span
+                                    class="m--font-bold m--font-primary">Retail</span></span></td>
+                            <td data-field="Actions" class="m-datatable__cell"><span
+                                    style="overflow: visible; position: relative; width: 110px;">                        <div
+                                    class="dropdown dropup">                            <a href="#"
+                                                                                           class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                                                                           data-toggle="dropdown">                                <i
+                                    class="la la-ellipsis-h"></i>                            </a>                            <div
+                                    class="dropdown-menu dropdown-menu-right">                                <a
+                                    class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>                            </div>                        </div>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Edit details">                            <i class="la la-edit"></i>                        </a>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Delete">                            <i class="la la-trash"></i>                        </a>                    </span>
+                            </td>
+                        </tr>
+                        <tr data-row="29" class="m-datatable__row m-datatable__row--even" style="left: 0px;">
+                            <td class="m-datatable__cell--center m-datatable__cell m-datatable__cell--check"
+                                data-field="RecordID"><span style="width: 40px;"><label
+                                    class="m-checkbox m-checkbox--single m-checkbox--solid m-checkbox--brand"><input
+                                    type="checkbox" value="271">&nbsp;<span></span></label></span></td>
+                            <td class="m-datatable__cell--sorted m-datatable__cell" data-field="OrderID"><span
+                                    style="width: 150px;">0299-4500 - NP</span></td>
+                            <td data-field="ShipName" class="m-datatable__cell"><span
+                                    style="width: 150px;">Turcotte-Orn</span></td>
+                            <td data-field="ShipDate" class="m-datatable__cell"><span
+                                    style="width: 110px;">11/26/2016</span></td>
+                            <td data-field="Status" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge m-badge--brand m-badge--wide">Pending</span></span></td>
+                            <td data-field="Type" class="m-datatable__cell"><span style="width: 100px;"><span
+                                    class="m-badge m-badge--accent m-badge--dot"></span>&nbsp;<span
+                                    class="m--font-bold m--font-accent">Direct</span></span></td>
+                            <td data-field="Actions" class="m-datatable__cell"><span
+                                    style="overflow: visible; position: relative; width: 110px;">                        <div
+                                    class="dropdown dropup">                            <a href="#"
+                                                                                           class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                                                                           data-toggle="dropdown">                                <i
+                                    class="la la-ellipsis-h"></i>                            </a>                            <div
+                                    class="dropdown-menu dropdown-menu-right">                                <a
+                                    class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>                                <a
+                                    class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>                            </div>                        </div>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Edit details">                            <i class="la la-edit"></i>                        </a>                        <a
+                                    href="#"
+                                    class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill"
+                                    title="Delete">                            <i class="la la-trash"></i>                        </a>                    </span>
+                            </td>
+                        </tr>
+                        <div class="ps__rail-x" style="width: 630px; left: 0px; bottom: -226px;">
+                            <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 443px;"></div>
+                        </div>
+                        <div class="ps__rail-y" style="top: 226px; height: 330px; right: 0px;">
+                            <div class="ps__thumb-y" tabindex="0" style="top: 134px; height: 195px;"></div>
+                        </div>
+                        </tbody>
+                    </table>
+                    <div class="m-datatable__pager m-datatable--paging-loaded clearfix">
+                        <ul class="m-datatable__pager-nav">
+                            <li><a title="First" class="m-datatable__pager-link m-datatable__pager-link--first"
+                                   data-page="1"><i class="la la-angle-double-left"></i></a></li>
+                            <li><a title="Previous" class="m-datatable__pager-link m-datatable__pager-link--prev"
+                                   data-page="2"><i class="la la-angle-left"></i></a></li>
+                            <li style="display: none;"><a title="More pages"
+                                                          class="m-datatable__pager-link m-datatable__pager-link--more-prev"
+                                                          data-page="1"><i class="la la-ellipsis-h"></i></a></li>
+                            <li style="display: none;"><input type="text" class="m-pager-input form-control"
+                                                              title="Page number"></li>
+                            <li><a class="m-datatable__pager-link m-datatable__pager-link-number" data-page="1"
+                                   title="1">1</a></li>
+                            <li><a class="m-datatable__pager-link m-datatable__pager-link-number" data-page="2"
+                                   title="2">2</a></li>
+                            <li>
+                                <a class="m-datatable__pager-link m-datatable__pager-link-number m-datatable__pager-link--active"
+                                   data-page="3" title="3">3</a></li>
+                            <li><a class="m-datatable__pager-link m-datatable__pager-link-number" data-page="4"
+                                   title="4">4</a></li>
+                            <li><a class="m-datatable__pager-link m-datatable__pager-link-number" data-page="5"
+                                   title="5">5</a></li>
+                            <li><a class="m-datatable__pager-link m-datatable__pager-link-number" data-page="6"
+                                   title="6">6</a></li>
+                            <li><a title="More pages" class="m-datatable__pager-link m-datatable__pager-link--more-next"
+                                   data-page="7"><i class="la la-ellipsis-h"></i></a></li>
+                            <li><a title="Next" class="m-datatable__pager-link m-datatable__pager-link--next"
+                                   data-page="4"><i class="la la-angle-right"></i></a></li>
+                            <li><a title="Last" class="m-datatable__pager-link m-datatable__pager-link--last"
+                                   data-page="35"><i class="la la-angle-double-right"></i></a></li>
+                        </ul>
+                        <div class="m-datatable__pager-info">
+                            <div class="dropdown bootstrap-select m-datatable__pager-size" style="width: 70px;"><select
+                                    class="selectpicker m-datatable__pager-size" title="Select page size"
+                                    data-width="70px" data-selected="10" tabindex="-98">
+                                <option class="bs-title-option" value="">Select page size</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                                <button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                                        role="button" title="Select page size">
+                                    <div class="filter-option">
+                                        <div class="filter-option-inner">10</div>
+                                    </div>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button>
+                                <div class="dropdown-menu " role="combobox">
+                                    <div class="inner show" role="listbox" aria-expanded="false" tabindex="-1">
+                                        <ul class="dropdown-menu inner show"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="m-datatable__pager-detail">Displaying 21 - 30 of 350 records</span></div>
+                    </div>
+                </div>
+                <!--end: Datatable -->
+            </div>
+        </div>
     </div>
-    <!-- end:: Body -->
-
-
-    <!-- begin::Footer -->
-    <div th:replace="~{admin/common/footer :: footer}"></div>
-    <!-- end::Footer -->
-
-
+    <div class="col-xl-4">
+        <!--begin:: Widgets/Audit Log-->
+        <div class="m-portlet m-portlet--full-height  m-portlet--unair">
+            <div class="m-portlet__head">
+                <div class="m-portlet__head-caption">
+                    <div class="m-portlet__head-title">
+                        <h3 class="m-portlet__head-text">
+                            Audit Log
+                        </h3>
+                    </div>
+                </div>
+                <div class="m-portlet__head-tools">
+                    <ul class="nav nav-pills nav-pills--brand m-nav-pills--align-right m-nav-pills--btn-pill m-nav-pills--btn-sm"
+                        role="tablist">
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_widget4_tab1_content"
+                               role="tab">
+                                Today
+                            </a>
+                        </li>
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget4_tab2_content"
+                               role="tab">
+                                Week
+                            </a>
+                        </li>
+                        <li class="nav-item m-tabs__item">
+                            <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget4_tab3_content"
+                               role="tab">
+                                Month
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="m-portlet__body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="m_widget4_tab1_content">
+                        <div class="m-scrollable m-scroller ps ps--active-y" data-scrollable="true" data-height="400"
+                             style="height: 400px; overflow: hidden;">
+                            <div class="m-list-timeline m-list-timeline--skin-light">
+                                <div class="m-list-timeline__items">
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--success"></span>
+                                        <span class="m-list-timeline__text">12 new users registered</span>
+                                        <span class="m-list-timeline__time">Just now</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--info"></span>
+                                        <span class="m-list-timeline__text">System shutdown <span
+                                                class="m-badge m-badge--success m-badge--wide">pending</span></span>
+                                        <span class="m-list-timeline__time">14 mins</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--danger"></span>
+                                        <span class="m-list-timeline__text">New invoice received</span>
+                                        <span class="m-list-timeline__time">20 mins</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--accent"></span>
+                                        <span class="m-list-timeline__text">DB overloaded 80% <span
+                                                class="m-badge m-badge--info m-badge--wide">settled</span></span>
+                                        <span class="m-list-timeline__time">1 hr</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--warning"></span>
+                                        <span class="m-list-timeline__text">System error - <a href="#" class="m-link">Check</a></span>
+                                        <span class="m-list-timeline__time">2 hrs</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--brand"></span>
+                                        <span class="m-list-timeline__text">Production server down</span>
+                                        <span class="m-list-timeline__time">3 hrs</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--info"></span>
+                                        <span class="m-list-timeline__text">Production server up</span>
+                                        <span class="m-list-timeline__time">5 hrs</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--success"></span>
+                                        <span href="" class="m-list-timeline__text">New order received <span
+                                                class="m-badge m-badge--danger m-badge--wide">urgent</span></span>
+                                        <span class="m-list-timeline__time">7 hrs</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--success"></span>
+                                        <span class="m-list-timeline__text">12 new users registered</span>
+                                        <span class="m-list-timeline__time">Just now</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--info"></span>
+                                        <span class="m-list-timeline__text">System shutdown <span
+                                                class="m-badge m-badge--success m-badge--wide">pending</span></span>
+                                        <span class="m-list-timeline__time">14 mins</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--danger"></span>
+                                        <span class="m-list-timeline__text">New invoice received</span>
+                                        <span class="m-list-timeline__time">20 mins</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--accent"></span>
+                                        <span class="m-list-timeline__text">DB overloaded 80% <span
+                                                class="m-badge m-badge--info m-badge--wide">settled</span></span>
+                                        <span class="m-list-timeline__time">1 hr</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--danger"></span>
+                                        <span class="m-list-timeline__text">New invoice received</span>
+                                        <span class="m-list-timeline__time">20 mins</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--accent"></span>
+                                        <span class="m-list-timeline__text">DB overloaded 80% <span
+                                                class="m-badge m-badge--info m-badge--wide">settled</span></span>
+                                        <span class="m-list-timeline__time">1 hr</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--warning"></span>
+                                        <span class="m-list-timeline__text">System error - <a href="#" class="m-link">Check</a></span>
+                                        <span class="m-list-timeline__time">2 hrs</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--brand"></span>
+                                        <span class="m-list-timeline__text">Production server down</span>
+                                        <span class="m-list-timeline__time">3 hrs</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--info"></span>
+                                        <span class="m-list-timeline__text">Production server up</span>
+                                        <span class="m-list-timeline__time">5 hrs</span>
+                                    </div>
+                                    <div class="m-list-timeline__item">
+                                        <span class="m-list-timeline__badge m-list-timeline__badge--success"></span>
+                                        <span href="" class="m-list-timeline__text">New order received <span
+                                                class="m-badge m-badge--danger m-badge--wide">urgent</span></span>
+                                        <span class="m-list-timeline__time">7 hrs</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ps__rail-x" style="left: 0px; bottom: -36px;">
+                                <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                            </div>
+                            <div class="ps__rail-y" style="top: 36px; height: 400px; right: 4px;">
+                                <div class="ps__thumb-y" tabindex="0" style="top: 22px; height: 249px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="m_widget4_tab2_content">
+                    </div>
+                    <div class="tab-pane" id="m_widget4_tab3_content">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end:: Widgets/Audit Log-->  </div>
 </div>
-<!-- end:: Page -->
-
-<!-- begin::Scroll Top -->
-<div id="m_scroll_top" class="m-scroll-top">
-    <i class="la la-arrow-up"></i>
-</div>
-<!-- end::Scroll Top -->
-
-
-
-        <!--<div class="dislpayArrow hidden-xs">-->
-            <!--<a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a>-->
-        <!--</div>-->
-        <!--<section class="Hui-article-box">-->
-            <!--<div id="Hui-tabNav" class="Hui-tabNav hidden-xs">-->
-                <!--<div class="Hui-tabNav-wp">-->
-                    <!--<ul id="min_title_list" class="acrossTab cl">-->
-                        <!--<li class="active"><span title="我的桌面" data-href="welcome.html">我的桌面</span><em></em></li>-->
-                    <!--</ul>-->
-                <!--</div>-->
-                <!--<div class="Hui-tabNav-more btn-group"><a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d4;</i></a><a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d7;</i></a></div>-->
-            <!--</div>-->
-            <!--<div id="iframe_box" class="Hui-article">-->
-                <!--<div class="show_iframe">-->
-                    <!--<div style="display:none" class="loading"></div>-->
-                    <!--<iframe scrolling="yes" frameborder="0" th:src="@{/admin/welcome}"></iframe>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</section>-->
-        <!--<div class="contextMenu" id="Huiadminmenu">-->
-            <!--<ul>-->
-                <!--<li id="closethis">关闭当前 </li>-->
-                <!--<li id="closeall">关闭全部 </li>-->
-            <!--</ul>-->
-        <!--</div>-->
-
 </body>
 </html>

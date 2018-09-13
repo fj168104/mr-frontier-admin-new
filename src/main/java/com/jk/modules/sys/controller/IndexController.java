@@ -51,7 +51,7 @@ public class IndexController extends BaseController{
     @GetMapping(value = "/admin/index")
     public String index(ModelMap modelMap){
 
-        return "inner";
+        return BASE_PATH + "index";
     }
 
     /**
