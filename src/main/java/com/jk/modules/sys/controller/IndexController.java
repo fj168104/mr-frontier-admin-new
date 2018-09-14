@@ -6,11 +6,15 @@ import com.jk.common.base.controller.BaseController;
 import com.jk.common.util.ShiroUtils;
 import com.jk.modules.log.model.Log;
 import com.jk.modules.log.service.LogService;
+import com.jk.modules.oti.model.OtiConfig;
+import com.jk.modules.oti.service.OtiConfigService;
+import com.jk.modules.oti.service.OtiFieldLibraryService;
 import com.jk.modules.sys.model.Permission;
 import com.jk.modules.sys.model.User;
 import com.jk.modules.sys.service.PermissionService;
 import com.xiaoleilu.hutool.date.DateUtil;
 import com.xiaoleilu.hutool.util.RandomUtil;
+import com.xiaoleilu.hutool.util.StrUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
@@ -21,6 +25,7 @@ import javax.annotation.Resource;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * 首页
@@ -35,6 +40,15 @@ public class IndexController extends BaseController{
     private PermissionService permissionService;
     @Resource
     private LogService logService;
+    //demo 消息ID
+    private static String MSG_ID_DEMO = "demo_msg";
+
+    @Resource
+    private OtiFieldLibraryService otiFieldLibraryService;
+    @Resource
+    private OtiConfigService otiConfigService;
+
+    private static volatile String s_msgId;
 
     /*
      * @methodName: toIndex
@@ -71,6 +85,7 @@ public class IndexController extends BaseController{
         }
         return BASE_PATH + "log/log-list";
     }
+
 
     /**
      * 欢迎页

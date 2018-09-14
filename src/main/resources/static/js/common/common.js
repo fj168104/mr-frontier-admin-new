@@ -33,7 +33,7 @@ function equals(obj1, obj2) {
 				if (!equals(obj1[ele], obj2[ele]))
 					return false;
 			} else if (typeof (obj1[ele]) == "function") {
-				if (!obj1[ele].toString().equals(obj2[ele].toString()))
+				if (!equals(obj1[ele].toString(), obj2[ele].toString()))
 					return false;
 			} else if (obj1[ele] != obj2[ele])
 				return false;
